@@ -6,4 +6,4 @@ authors: [ Luc Wallace ]
 commands:
   ypt:
     description: YeolPumTa integration
-    usage: /ypt time, /ypt register <user> <id>
+    usage: /ypt time, /ypt register <player> <ypt_id>, /ypt status, /ypt group
