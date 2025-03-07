@@ -1,0 +1,9 @@
+name: YptMC
+version: '1.0-SNAPSHOT'
+main: me.lucwallace.yptmc.YptMC
+api-version: '1.21'
+authors: [ Luc Wallace ]
+commands:
+  ypt:
+    description: YeolPumTa integration
+    usage: /ypt time, /ypt register <user> <id>
