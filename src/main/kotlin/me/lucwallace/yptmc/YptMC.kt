@@ -55,7 +55,6 @@ class YptMC : JavaPlugin() {
         logger.info("DB minute tick task started")
 
         while (running) {
-            logger.info("Ticking minutes")
             val tickEnd = Instant.now().plusSeconds(60)
             val players = Bukkit.getOnlinePlayers()
 
