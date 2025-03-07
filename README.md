@@ -2,6 +2,10 @@
 
 The Minecraft plugin for procrastinators with exams.
 
+YptMC limits play time to the amount of time you've logged studying on YeolPumTa.
+
+If you run out of time, you will be kicked from the server.
+
 Compatible with Minecraft 1.21.4.
 
 ## Why?
