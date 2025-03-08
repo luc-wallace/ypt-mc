@@ -107,6 +107,13 @@ class Database(val name: String) {
         stmt.execute()
     }
 
+    fun renumerateUser(uuid: UUID, minutes: Int) {
+        val stmt = conn.prepareStatement("UPDATE users SET total_minutes = total_minutes + ? WHERE uuid = ?")
+        stmt.setInt(1, minutes)
+        stmt.setString(2, uuid.toString())
+        stmt.execute()
+    }
+
     fun close() {
         conn.close()
     }

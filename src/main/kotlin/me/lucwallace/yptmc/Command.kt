@@ -91,6 +91,27 @@ class Command(private val db: Database?, private val api: API?) : CommandExecuto
                 sender.sendMessage(message.dropLast(1))
             }
 
+            "renumerate" -> {
+                if (sender !is Server && !sender.isOp) {
+                    sender.sendMessage(
+                        Component.text("You do not have permission to use this command.")
+                            .color(NamedTextColor.RED)
+                    )
+                    return true
+                }
+                val p = args.getOrNull(1) ?: return false
+                val minutes = args.getOrNull(2)?.toIntOrNull() ?: return false
+                if (minutes < 1) return false
+
+
+                val player = Bukkit.getOfflinePlayer(p)
+                db?.renumerateUser(player.uniqueId, minutes)
+                sender.sendMessage(
+                    Component.text("Added $minutes minute(s) to ${player.name}.")
+                        .color(NamedTextColor.GREEN)
+                )
+            }
+
             else -> return false
         }
         return true

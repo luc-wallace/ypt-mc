@@ -40,3 +40,5 @@ study_ratio: 3
 `/ypt time`: Outputs how much play time you have left on the server
 
 `/ypt status`: Outputs status of all registered server members, whether they are on the server, studying or offline
+
+`/ypt renumerate <player> <minutes>`: Add the provided number of minutes to the player (requires op)
