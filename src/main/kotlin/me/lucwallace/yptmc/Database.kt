@@ -101,7 +101,7 @@ class Database(val name: String) {
     }
 
     fun registerUser(uuid: UUID, yptID: Int) {
-        val stmt = conn.prepareStatement("INSERT INTO users VALUES (?, ?, 0, 0, 0, 0)")
+        val stmt = conn.prepareStatement("INSERT INTO users VALUES (?, ?, 60, 0, 0, 0)")
         stmt.setString(1, uuid.toString())
         stmt.setInt(2, yptID)
         stmt.execute()
