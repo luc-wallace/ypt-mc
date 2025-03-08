@@ -21,7 +21,7 @@ class JoinListener(private val db: Database?) : Listener {
             player.kick(Component.text("You cannot play on the server while studying.").color(NamedTextColor.RED))
             return
         } else if (user.totalMinutes == 0) {
-            event.player.kick(Component.text("You have no study minutes.").color(NamedTextColor.RED))
+            event.player.kick(Component.text("You have no play time left.").color(NamedTextColor.RED))
             return
         }
 

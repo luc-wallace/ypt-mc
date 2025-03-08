@@ -73,7 +73,7 @@ class YptMC : JavaPlugin() {
                     return@forEach
                 } else if (it.totalMinutes < 1) {
                     Bukkit.getScheduler().runTask(this, Runnable {
-                        player.kick(Component.text("You have run out of study time.").color(NamedTextColor.RED))
+                        player.kick(Component.text("You have run out of play time.").color(NamedTextColor.RED))
                     })
                     return@forEach
                 }
